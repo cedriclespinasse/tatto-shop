@@ -1,4 +1,17 @@
-// pages/index.js
+{
+  "name": "ink-haven-mockup",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "13.5.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  }
+}
 import Head from 'next/head'
 
 export default function Home() {
@@ -12,7 +25,7 @@ export default function Home() {
 
       <main className="min-h-screen bg-gray-900 text-white font-sans">
         {/* Hero Section */}
-        <section className="h-screen flex flex-col justify-center items-center text-center bg-[url('/tattoo-hero.jpg')] bg-cover bg-center">
+        <section className="h-screen flex flex-col justify-center items-center text-center bg-cover bg-center" style={{ backgroundImage: "url('https://source.unsplash.com/1600x900/?tattoo')" }}>
           <h1 className="text-5xl md:text-7xl font-bold drop-shadow-lg">Ink Haven</h1>
           <p className="mt-4 text-xl md:text-2xl drop-shadow-lg">Bold. Creative. Timeless.</p>
           <a href="#portfolio" className="mt-8 px-6 py-3 bg-red-600 rounded-full text-white font-semibold hover:bg-red-700 transition">
@@ -33,19 +46,19 @@ export default function Home() {
           <h2 className="text-4xl font-bold mb-10 text-center">Portfolio</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
             <div className="bg-gray-800 rounded-lg overflow-hidden">
-              <img src="/tattoo1.jpg" alt="Tattoo 1" className="w-full h-64 object-cover"/>
+              <img src="https://source.unsplash.com/400x400/?tattoo,dragon" alt="Tattoo 1" className="w-full h-64 object-cover"/>
               <div className="p-4">
                 <h3 className="text-xl font-semibold">Dragon Sleeve</h3>
               </div>
             </div>
             <div className="bg-gray-800 rounded-lg overflow-hidden">
-              <img src="/tattoo2.jpg" alt="Tattoo 2" className="w-full h-64 object-cover"/>
+              <img src="https://source.unsplash.com/400x400/?tattoo,flower" alt="Tattoo 2" className="w-full h-64 object-cover"/>
               <div className="p-4">
                 <h3 className="text-xl font-semibold">Floral Backpiece</h3>
               </div>
             </div>
             <div className="bg-gray-800 rounded-lg overflow-hidden">
-              <img src="/tattoo3.jpg" alt="Tattoo 3" className="w-full h-64 object-cover"/>
+              <img src="https://source.unsplash.com/400x400/?tattoo,geometric" alt="Tattoo 3" className="w-full h-64 object-cover"/>
               <div className="p-4">
                 <h3 className="text-xl font-semibold">Geometric Arm</h3>
               </div>
@@ -77,3 +90,12 @@ export default function Home() {
     </>
   )
 }
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./pages/**/*.{js,ts,jsx,tsx}"],
+  theme: { extend: {} },
+  plugins: [],
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
